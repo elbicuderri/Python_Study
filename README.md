@@ -1,4 +1,4 @@
-# Python_Advanced
+# Python_Study
 
 ```python
 # iterator란
