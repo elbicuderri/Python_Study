@@ -49,7 +49,7 @@ class Solution:  ## not completed
                         h_index = r
                         w_index = (numRows-1)*q
                         if h_index >= numRows or w_index >= column:
-                                continue
+                            continue
                         print(f"(h, w): ({h_index}, {w_index}), index: {index}, s[index]: {s[index]}")
                         # print(f"h: {h_index}, w: {w_index}, index: {index}, s[index]: {s[index]}")
                         zero_matrix[h_index][w_index] = s[index]
