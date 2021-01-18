@@ -22,7 +22,7 @@ SoyNet Coding Guide For Python version 0.2
 >
 > 작성일: 2021년 1월 18일
 >
-> version : 0.2 (demo)
+> version : 0.2 (demo) -> 1.0 까지는 demo
 
 <br>
 
@@ -35,9 +35,13 @@ SoyNet Coding Guide For Python version 0.2
 ## 기본적으로 알아야 하고 알아두면 좋은 것들(추가 예정...)
 - 변수(variable): 파이썬에서 변수의 타입은 런타임에 정해진다. 그렇기에 주석으로 타입을 항상 명시해주는 것이 좋다.
 - 함수(function): 파이썬에서 함수의 변수 타입과 리턴 타입을 명시해주는 방법이 존재한다. 잘 이용해보자.
-- 클래스(class): __init__ 에서 self에 담은 변수는 class 어디에서도 사용할 수 있는 변수다.
-- 리스트(list): a[::-1],
-- 문자열(string): ''.join(a)
+- 리스트(list): 
+```python
+a = [1, 2, 3]
+b = a
+c = a[:]
+```
+- 문자열(string): 파이썬에서 문자열은 
 
 <br>
 
@@ -216,6 +220,24 @@ if guilty:
 # Wrong
 if guilty == True:
 ```
+
+- 추가예정 category (백승환) for coding guide
+    + EAFP - 'It's Easier to Ask Forgiveness than Permission' 의 줄임말 입니다. 허락보다 용서구하는 것이 쉽다.
+    + do not use global keyword
+    
+
+- 추가예정 category (백승환) for coding tips
+    + 파일 읽기, 쓰기
+    + 예외 처리
+    + list comprehension
+    + dictionary key value items
+    + iterator
+    + collections package
+    + argparse
+    + anaconda, pip
+    + help, dir
+    + debug
+    
 
 
 ## 업데이트 내역
