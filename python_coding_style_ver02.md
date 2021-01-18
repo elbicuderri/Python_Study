@@ -170,7 +170,7 @@ if instance(obj, int):
 if type(obj) is type(1):
 ```
 
-14. sequence(string, list, tuple) 이 비어있는지 아닌지 검사법.
+14. sequence(string, list, tuple) 값이 비어있는지 아닌지 검사법.
 ```python
 # Correct
 if not sequence:
