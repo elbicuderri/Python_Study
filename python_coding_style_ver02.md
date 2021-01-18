@@ -2,7 +2,7 @@
 >
 > 작성목적: Python에서의 코딩 가이드를 제시하여 소이넷 내에서 효율적인 작업환경을 구축하기<br>
 > 위해 이 문서는 작성되었다. 이 문서가 절대적인 기준은 아니지만 가이드라인을 제시해준다.
-> 또한 가이드라인 뿐만 아니라 파이썬 코딩 팁들도 제시해준다.
+> 
 
 <br>
 
@@ -35,13 +35,6 @@ SoyNet Coding Guide For Python version 0.2
 ## 기본적으로 알아야 하고 알아두면 좋은 것들(추가 예정...)
 - 변수(variable): 파이썬에서 변수의 타입은 런타임에 정해진다. 그렇기에 주석으로 타입을 항상 명시해주는 것이 좋다.
 - 함수(function): 파이썬에서 함수의 변수 타입과 리턴 타입을 명시해주는 방법이 존재한다. 잘 이용해보자.
-- 리스트(list): 
-```python
-a = [1, 2, 3]
-b = a
-c = a[:]
-```
-- 문자열(string): 파이썬에서 문자열은 
 
 <br>
 
@@ -192,53 +185,6 @@ from math import sqrt
 c = sqrt(3) # not bad
 ```
 
-15. type 검사법.
-```python
-# Correct 
-if instance(obj, int):
-
-# Wrong
-if type(obj) is type(1):
-```
-
-16. sequence(string, list, tuple) 값이 비어있는지 아닌지 검사법.
-```python
-# Correct
-if not sequence:
-if sequence:
-
-#Wrong
-if len(sequence):
-if not len(sequence):
-```
-
-17. boolean 값을 == 로 비교하지 마라.
-```python
-# Correct
-if guilty:
-
-# Wrong
-if guilty == True:
-```
-
-- 추가예정 category (백승환) for coding guide
-    + EAFP - 'It's Easier to Ask Forgiveness than Permission' 의 줄임말 입니다. 허락보다 용서구하는 것이 쉽다.
-    + do not use global keyword
-    
-
-- 추가예정 category (백승환) for coding tips
-    + 파일 읽기, 쓰기
-    + 예외 처리
-    + list comprehension
-    + dictionary key value items
-    + iterator
-    + collections package
-    + argparse
-    + anaconda, pip
-    + help, dir
-    + debug
-    
-
 
 ## 업데이트 내역
 - 2021년 1월 18월: version 0.1 by 백승환
@@ -247,12 +193,6 @@ if guilty == True:
         > ~~=가 대입인 경우에는 상관 없음. 오히려 한 칸 씩 띄우는 것 권장.~~<br>
         > 👉 =가 대입인 경우에는 앞 뒤로 한 칸 씩 띄우기.
 
-## version 변경 기준
-- 단순 변경 -> 소숫점 1 증가. 예) 1.9 -> 1.10
-- 사항 단순 추가 -> 소숫점 1 증가.
-- 구조 자체가 변경 -> 1의 자리수 1 증가. 예) 1.13 -> 2.0
-    + 예) 단순 1 ~ 40 나열에서 coding guide + coding tip 두 category로 분리.
-- 사항의 중요도 논의에 따라 순서 대거 변경 및 사항 대량 추가 -> 1의 자리수 1 증가.
 
 <br>
 
