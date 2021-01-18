@@ -87,7 +87,7 @@ a = [1, 2, 3, 4, 5]
   
 5. =가 함수나 클래스의 변수에 쓰일때는 붙이기.
 ```python
-df.drdf(columns=df_drop_col_list, inplace=True)
+df.drop(columns=df_drop_col_list, inplace=True)
 ```
 
 6. =가 대입인 경우에는 앞 뒤로 한 칸 씩 띄우기.
