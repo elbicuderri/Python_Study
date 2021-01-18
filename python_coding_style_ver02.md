@@ -41,14 +41,17 @@ first_df = pd.read_csv(first_file_path)
 def sn_from_csv(path: str) -> int: 
   ...
 
-VERY_IMPORTANT_VARIABLE = 0
+VERY_IMPORTANT_VARIABLE = "soynet"
+
+# Wrong
+31_ice_cream = "delicious" 
 ```
 
 2. 클래스는 단어별 첫글자는 대문자이고 Camel 스타일.
 ```python
-class RoadData:
-  def __init__(self, path: str):
-    self.path = path
+class SoyNetClass:
+  def __init__(self, person: str):
+    self.person = person
     ...
 ```
 
@@ -60,7 +63,7 @@ path : 파일 경로(string)
 serial_number : 고유 값(int)
 """
 def sn_from_csv(path: str) -> int:
-    import pandas as pd # pandas : csv를 다루는 library
+    import pandas as pd # pandas : csv같은 data파일을 다루는 library
 
     df = pd.read_csv(path) # 파일 경로로부터 DataFrame를 불러온다.
     serial_number = df["SN"][0] # 첫번째 고유 값을 가져온다.
@@ -74,7 +77,7 @@ def sn_from_csv(path: str) -> int:
 map : 모든 셀에 lambda 함수를 실행
 lambda : 한 셀에 대해 해당 셀이 빈 문자열('')이면 np.nan(결측치)로 채우고 아니면 그대로 둔다.
 """
-op["SN"] = op["SN"].map(lambda x : np.nan if x == '' else x) 
+df["SN"] = df["SN"].map(lambda x : np.nan if x == '' else x) 
 ```
 
 4. ,은 앞에는 붙이고 뒤에는 한 칸 띄기.
@@ -84,12 +87,12 @@ a = [1, 2, 3, 4, 5]
   
 5. = 가 함수나 클래스의 변수에 쓰일때는 붙이기.
 ```python
-op.drop(columns=op_drop_col_list, inplace=True)
+df.drdf(columns=df_drop_col_list, inplace=True)
 ```
 
 6. =가 대입인 경우에는 앞 뒤로 한 칸 씩 띄우기.
 ```python
-op_null_dict = dict(op.isnull().sum() / op.shape[0]) 
+df_null_dict = dict(df.isnull().sum() / df.shape[0]) 
 ```
 
 7. /, //, +=, -=, *=, /=, ==, % 같은 모든 산술연산자는 앞 뒤로 한 칸 씩 띄우기.
@@ -118,8 +121,8 @@ from utils import utils # utils.py 안에 함수 구성.
 from utils import AutoEncoder # AutoEncoder.py 안에 class 구성.
 from utils import Work42 # Work42.py 안에 Work42 class 구성.
 
-func1 = utils.func1(...)
-func2 = utils.func2(...)
+z1 = utils.func1(...)
+z2 = utils.func2(...)
 
 AutoEncoder = AutoEncoder.AutoEncoder(...)
 AutoEncoder.fit(...)
@@ -133,7 +136,7 @@ Wokr42.show(...)
 names = ["John", "Aily", "Chris", "Trump"]
 ages = [12.31, 34.123, 23.0, 65]
 for name, age in zip(names, ages):
-  print(f"{name} is {age:.1f} years old.")
+  print(f"{name} is {float(age):.1f} years old.")
 ```
 
 11. import는 한 줄에 하나씩만.
