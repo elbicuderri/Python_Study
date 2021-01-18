@@ -118,7 +118,7 @@ utils라는 폴더와 그 밑에 utils.py, AutoEncoder.py, Work42.py 존재.
 utils -> 폴더 이름에 따라 교체. 밑에는 예시.
 """
 from utils import utils # utils.py 안에 함수 구성.
-from utils import AutoEncoder # AutoEncoder.py 안에 class 구성.
+from utils import AutoEncoder # AutoEncoder.py 안에 AutoEncoder class 구성.
 from utils import Work42 # Work42.py 안에 Work42 class 구성.
 
 z1 = utils.func1(...)
