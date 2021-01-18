@@ -34,7 +34,15 @@ SoyNet Coding Guide For Python version 0.2
 """
 ```
 
-1. 변수와 함수는 소문자이면서 snake 스타일.<br> 변수를 **매우 강조**하고 싶으면 대문자 가능. 함수는 비권장. 숫자로 시작하면 안된다.
+1. 모든 변수, 함수, 클래스 이름을 지을 때는 최대한 자세하게 지으면서 동사나 형용사를 앞에 놓아라.
+```python
+highest_average_list = []
+def get_low_loss_from_data():
+  ...
+  return lowest_loss
+```
+
+2. 변수와 함수는 소문자이면서 snake 스타일.<br> 변수를 **매우 강조**하고 싶으면 대문자 가능. 함수는 비권장. 숫자로 시작하면 안된다.
 ```python
 first_df = pd.read_csv(first_file_path)
 
@@ -47,7 +55,7 @@ VERY_IMPORTANT_VARIABLE = "soynet"
 31_ice_cream = "delicious" 
 ```
 
-2. 클래스는 단어별 첫글자는 대문자이고 Camel 스타일.
+3. 클래스는 단어별 첫글자는 대문자이고 Camel 스타일.
 ```python
 class SoyNetClass:
   def __init__(self, person: str):
@@ -55,7 +63,7 @@ class SoyNetClass:
     ...
 ```
 
-2. 함수와 클래스에 대한 주석은 윗쪽에. 두줄 이상인 경우 단락 주석으로.
+4. 함수와 클래스에 대한 주석은 윗쪽에. 두줄 이상인 경우 단락 주석으로.
 ```python
 """
 csv파일로부터 sn(serial number)를 읽는 함수
@@ -71,7 +79,7 @@ def sn_from_csv(path: str) -> int:
     return serial_number
 ```
 
-3. 코드와 변수에 대한 짧은 주석은 오른쪽에. 두 줄 이상인 경우 윗 쪽에 단락 주석으로.
+5. 코드와 변수에 대한 짧은 주석은 오른쪽에. 두 줄 이상인 경우 윗 쪽에 단락 주석으로.
 ```python
 """
 map : 모든 셀에 lambda 함수를 실행
@@ -80,28 +88,28 @@ lambda : 한 셀에 대해 해당 셀이 빈 문자열('')이면 np.nan(결측�
 df["SN"] = df["SN"].map(lambda x: np.nan if x == '' else x) 
 ```
 
-4. ,는 앞에는 붙이고 뒤에는 한 칸 띄기.
+6. ,는 앞에는 붙이고 뒤에는 한 칸 띄기.
 ```python
 a = [1, 2, 3, 4, 5]
 ```
   
-5. =가 함수나 클래스의 변수에 쓰일때는 붙이기.
+7. =가 함수나 클래스의 변수에 쓰일때는 붙이기.
 ```python
 df.drop(columns=df_drop_col_list, inplace=True)
 ```
 
-6. =가 대입인 경우에는 앞 뒤로 한 칸 씩 띄우기.
+8. =가 대입인 경우에는 앞 뒤로 한 칸 씩 띄우기.
 ```python
 df_null_dict = dict(df.isnull().sum() / df.shape[0]) 
 ```
 
-7. /, //, +=, -=, *=, /=, ==, % 같은 모든 산술연산자는 앞 뒤로 한 칸 씩 띄우기.
+9. /, //, +=, -=, *=, /=, ==, % 같은 모든 산술연산자는 앞 뒤로 한 칸 씩 띄우기.
 ```python
 r = p // q
 g += 3
 ```
 
-8. 가독성을 위해 빈 줄을 두는 경우 두 줄 까지만 허용.
+10. 가독성을 위해 빈 줄을 두는 경우 두 줄 까지만 허용.
 ```python
 a_x = 3
 #
@@ -110,7 +118,7 @@ a_x = 3
 b_y = 4 # not allowed
 ```
 
-9. 프로젝트 폴더 구성시 함수들은 하나의 py파일에 저장, class는 class이름.py에 저장 권장.
+11. 프로젝트 폴더 구성시 함수들은 하나의 py파일에 저장, class는 class이름.py에 저장 권장.
 ```python
 """
 현재 main.py 안.
@@ -131,7 +139,7 @@ Work42 = Work42.Work42(...)
 Wokr42.show(...)
 ```
 
-10. f-문자열 포매팅(파이썬 3.6 이상부터) 권장.
+12. f-문자열 포매팅(파이썬 3.6 이상부터) 권장.
 ```python
 names = ["John", "Aily", "Chris", "Trump"]
 ages = [12.31, 34.123, 23.0, 65]
@@ -139,7 +147,7 @@ for name, age in zip(names, ages):
   print(f"{name} is {float(age):.1f} years old.")
 ```
 
-11. import는 한 줄에 하나씩만.
+13. import는 한 줄에 하나씩만.
 ```python
 # Correct
 import os
@@ -149,7 +157,7 @@ import sys
 import os, sys 
 ```
 
-12. from을 사용할 경우 * 사용 비권장.
+14. from을 사용할 경우 * 사용 비권장.
 ```python
 from math import *
 a = sqrt(3) # 이 경우는 명확하나 복잡한 경우 어느 곳에서 import한지 헷갈림
@@ -161,7 +169,7 @@ from math import sqrt
 c = sqrt(3) # not bad
 ```
 
-13. type 검사법.
+15. type 검사법.
 ```python
 # Correct 
 if instance(obj, int):
@@ -170,7 +178,7 @@ if instance(obj, int):
 if type(obj) is type(1):
 ```
 
-14. sequence(string, list, tuple) 값이 비어있는지 아닌지 검사법.
+16. sequence(string, list, tuple) 값이 비어있는지 아닌지 검사법.
 ```python
 # Correct
 if not sequence:
@@ -181,7 +189,7 @@ if len(sequence):
 if not len(sequence):
 ```
 
-15. boolean 값을 == 로 비교하지 마라.
+17. boolean 값을 == 로 비교하지 마라.
 ```python
 # Correct
 if guilty:
