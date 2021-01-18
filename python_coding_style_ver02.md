@@ -49,16 +49,16 @@ SoyNet Coding Guide For Python version 0.2
 highest_average_list = []
 
 def get_low_loss_from_data(data: list) -> float:
-  ...
-  return lowest_loss
+    ...
+    return lowest_loss
 ```
 
 2. 변수와 함수는 소문자이면서 snake 스타일.<br> 변수를 **매우 강조**하고 싶으면 대문자 가능. 함수는 비권장. 숫자로 시작하면 안된다.
 ```python
 first_df = pd.read_csv(first_file_path)
 
-def sn_from_csv(path: str) -> int: 
-  ...
+def get_sn_from_csv(path: str) -> int: 
+    ...
 
 VERY_IMPORTANT_VARIABLE = "soynet"
 
@@ -69,9 +69,9 @@ VERY_IMPORTANT_VARIABLE = "soynet"
 3. 클래스는 단어별 첫글자는 대문자이고 Camel 스타일.
 ```python
 class SoyNetClass:
-  def __init__(self, person: str):
-    self.person = person
-    ...
+    def __init__(self, person: str):
+        self.person = person
+        ...
 ```
 
 4. 함수와 클래스에 대한 주석은 윗쪽에. 두줄 이상인 경우 단락 주석으로.
@@ -81,7 +81,7 @@ csv파일로부터 sn(serial number)를 읽는 함수
 path : 파일 경로(string)
 sn(serial_number) : 고유 값(int)
 """
-def sn_from_csv(path: str) -> int:
+def get_sn_from_csv(path: str) -> int:
     import pandas as pd # pandas : csv같은 data파일을 다루는 library
 
     df = pd.read_csv(path) # 파일 경로로부터 DataFrame를 불러온다.
