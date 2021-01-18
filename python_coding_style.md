@@ -9,7 +9,7 @@ def sn_from_csv(path: str):
 - 클래스는 단어 첫글자는 대문자이고 Camel 스타일.
 ```python
 def RoadData():
-  __init__(self, path):
+  def __init__(self, path):
     self.path = path
     ...
 ```
