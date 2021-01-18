@@ -37,7 +37,8 @@ SoyNet Coding Guide For Python version 0.2
 1. 모든 변수, 함수, 클래스 이름을 지을 때는 최대한 자세하게 지으면서 동사나 형용사를 앞에 놓아라.
 ```python
 highest_average_list = []
-def get_low_loss_from_data():
+
+def get_low_loss_from_data(data: list) -> float:
   ...
   return lowest_loss
 ```
