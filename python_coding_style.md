@@ -14,7 +14,7 @@ def RoadData():
     ...
 ```
 
-- 함수와 클래스에 대한 주석은 윗쪽에.
+- 함수와 클래스에 대한 주석은 윗쪽에. 너무 긴 경우 단락 주석으로.
 ```python
 # csv파일로부터 serial number 읽기
 def sn_from_csv(path: str):
