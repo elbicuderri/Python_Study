@@ -23,6 +23,10 @@ SoyNet Coding Guide For Python version 0.2
 
 <br>
 
+## 용어정의
+
+<br>
+
 ## Start
 
 0. 코드 맨 위에 이 문서에 없는 기준이라도 자신이 사용한 기준이 존재한다면 전부 적어라.
