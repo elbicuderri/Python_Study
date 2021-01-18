@@ -77,7 +77,7 @@ def sn_from_csv(path: str) -> int:
 map : 모든 셀에 lambda 함수를 실행
 lambda : 한 셀에 대해 해당 셀이 빈 문자열('')이면 np.nan(결측치)로 채우고 아니면 그대로 둔다.
 """
-df["SN"] = df["SN"].map(lambda x : np.nan if x == '' else x) 
+df["SN"] = df["SN"].map(lambda x: np.nan if x == '' else x) 
 ```
 
 4. ,는 앞에는 붙이고 뒤에는 한 칸 띄기.
