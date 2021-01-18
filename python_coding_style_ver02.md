@@ -58,9 +58,9 @@ class SoyNetClass:
 2. 함수와 클래스에 대한 주석은 윗쪽에. 두줄 이상인 경우 단락 주석으로.
 ```python
 """
-csv파일로부터 serial number를 읽는 함수
+csv파일로부터 sn(serial number)를 읽는 함수
 path : 파일 경로(string)
-serial_number : 고유 값(int)
+sn(serial_number) : 고유 값(int)
 """
 def sn_from_csv(path: str) -> int:
     import pandas as pd # pandas : csv같은 data파일을 다루는 library
