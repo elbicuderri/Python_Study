@@ -23,7 +23,10 @@ def sn_from_csv(path: str):
 
 - 코드와 변수에 대한 주석은 오른쪽에. 너무 긴 경우 밑 쪽에 단락 주석으로.
 ```python
-op40["SN"] = op40["SN"].map(lambda x : np.nan if x == '' else x) # 해당 셀이 빈 문자열('')이면 np.nan(결측치)로 채우고 아니면 그대로 둔다.
+op40["SN"] = op40["SN"].map(lambda x : np.nan if x == '' else x) 
+"""
+해당 셀이 빈 문자열('')이면 np.nan(결측치)로 채우고 아니면 그대로 둔다.
+"""
 ```
 
 - , 은 앞에는 붙이고 뒤에는 한 칸 띄기.
