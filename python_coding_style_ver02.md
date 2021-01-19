@@ -58,7 +58,7 @@ def get_low_loss_from_data(data: list) -> float:
     return lowest_loss
 ```
 
-2. 변수와 함수는 소문자이면서 snake 스타일.<br> 변수를 **매우 강조**하고 싶으면 대문자 가능. 함수는 비권장. 숫자로 시작하면 안된다.
+2. 변수와 함수는 소문자이면서 snake case.<br> 변수를 **매우 강조**하고 싶으면 대문자 가능. 함수는 비권장. 숫자로 시작하면 안된다.
 ```python
 first_df = pd.read_csv(first_file_path)
 
@@ -71,7 +71,7 @@ VERY_IMPORTANT_VARIABLE = "soynet"
 31_ice_cream = "delicious" 
 ```
 
-3. 클래스는 단어별 첫글자는 대문자이고 Camel 스타일.
+3. 클래스는 단어별 첫글자는 대문자이고 Pascal case.
 ```python
 class SoyNetClass:
     def __init__(self, person: str):
